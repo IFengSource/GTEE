@@ -1,0 +1,42 @@
+name: TSI
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+  - defaults
+
+dependencies:
+  # ======================
+  # Python
+  # ======================
+  - python=3.10.13
+
+  # ======================
+  # Core scientific stack
+  # ======================
+  - numpy=1.26.4
+  - scipy=1.12.0
+  - h5py=3.10.0
+
+  # ======================
+  # PyTorch + CUDA
+  # ======================
+  - pytorch=2.2.1
+  - pytorch-cuda=12.1
+
+  # ======================
+  # Utils
+  # ======================
+  - tensorboard=2.16.2
+  - openpyxl=3.1.5
+  - pip
+
+  # ======================
+  # Pip dependencies
+  # ======================
+  - pip:
+      - tsdb==0.4
+      - pygrinder==0.6
+      - benchpots==0.1
+      - pypots==0.6
+      - nni==2.10.1

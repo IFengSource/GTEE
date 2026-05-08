@@ -1,0 +1,17 @@
+experimentName: SAITS_GTEE hyper-param searching ETT_h1 point05
+trialConcurrency: 1
+maxExperimentDuration: 12h
+maxTrialNumber: 100
+searchSpaceFile: SAITS_GTEE_ETT_h1_tuning_space.json
+useAnnotation: false
+trialCommand: python auto_tuning/tuning_main.py tuning --model SAITS_GTEE --dataset_path data/generated_datasets/ETTh1/ett_rate05_step48_point --load_main_freqs_extra
+trialCodeDirectory: /root/autodl-tmp/GTEE
+trialGpuNumber: 1
+tuner:
+  name: Random
+
+trainingService:
+  platform: local
+  gpuIndices: 0
+  maxTrialNumberPerGpu: 5
+  useActiveGpu: true

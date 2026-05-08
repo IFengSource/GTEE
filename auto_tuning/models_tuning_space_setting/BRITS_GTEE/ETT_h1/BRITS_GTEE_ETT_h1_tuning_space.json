@@ -1,0 +1,23 @@
+{
+    "ts_main_freq_num":  {"_type":"choice","_value":[1,3,5]},
+    "ts_main_freq_solvers": {"_type":"choice","_value":[["ACF", "Burg_roots"]]},
+    "ts_solvers_combine": {"_type":"choice","_value":[false]},
+    "ts_sampling_num": {"_type":"choice","_value":[1,2,3]},
+    "ts_sampling_length": {"_type":"choice","_value":[128, 256, 512, 1024]},
+    "ts_scaling_factor": {"_type":"uniform","_value":[0.1,1.0]},
+    "ts_freqs_merge_value": {"_type":"loguniform","_value":[0.001,1.0]},
+    "ts_refining_mode": {"_type":"choice","_value":["median"]},
+    "TS_ch_embedding_dim": {"_type":"choice","_value":[2, 4, 8, 16, 32]},
+    "TS_hidden_dim": {"_type":"choice","_value":[4,8,16,32,64,128]},
+    "TS_reg_weight": {"_type":"loguniform","_value":[0.0001,0.5]},
+    "TS_fusion_conv_kernels": {"_type":"choice","_value":[[3,5,7],[3,5],[5,7,9]]},
+    "TS_fusion_hidden_dim": {"_type":"choice","_value":[4,8,16,32,64]},
+    "TS_loss_weight": {"_type":"loguniform","_value":[0.0001,0.5]},
+    "TS_dropout": {"_type":"choice","_value":[0,0.1,0.2,0.3,0.4,0.5]},
+    "n_steps":  {"_type":"choice","_value":[48]},
+    "n_features":  {"_type":"choice","_value":[7]},
+    "patience":  {"_type":"choice","_value":[10]},
+    "epochs":  {"_type":"choice","_value":[100]},
+    "rnn_hidden_size":  {"_type":"choice","_value":[32,64,128,256,512,1024]},
+    "lr":{"_type":"loguniform","_value":[0.00005,0.01]}
+}
